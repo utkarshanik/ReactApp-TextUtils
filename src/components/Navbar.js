@@ -8,7 +8,7 @@ export default function Navbar(props) {
  <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode==='dark'?'black':'light'}`}>
 
  <div className="container-fluid">
-   <Link className="navbar-brand" to="/home">{props.title}</Link>
+   <Link className="navbar-brand" to="/">{props.title}</Link>
 {/* 
   <a className="navbar-brand" href="#">{props.title}</a> */}
    
@@ -28,8 +28,8 @@ export default function Navbar(props) {
        </li>
      </ul>
 
-          {/* Colour pallete */}
-     {/* <div className="d-flex">
+          {/* Colour pallete */} 
+      {/* <div className="d-flex">
         <div className="bg-primary rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}} onClick={()=>{props.tog('primary')}}></div>
         <div className="bg-danger rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}} onClick={()=>{props.tog('danger')}}></div>
         <div className="bg-success rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}} onClick={()=>{props.tog('success')}}></div>

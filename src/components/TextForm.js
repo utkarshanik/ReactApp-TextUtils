@@ -37,8 +37,8 @@ export default function TextForm(props) {
      
        const handlespac=()=>
        {
-          //  let newText=text.split(/[   ]+/);
-          //  setText(newText.join(" "));
+           let newText=text.split(/[   ]+/);
+           setText(newText.join(" "));
            navigator.clipboard.writeText(text);
            props.showAlert("Space Has Removed","success")
 
