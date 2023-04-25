@@ -43,13 +43,13 @@ export default function About(props) {
             <h2 className="accordion-header" >
             <button className="accordion-button" style={{backgroundColor:props.mode==='dark' ? '#5e4b43':'#ced4da'
   ,color:props.mode==='dark' ?'white':'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
+                About Text-Utils
             </button>
             </h2>
             <div id="collapseOne" style={{backgroundColor:props.mode==='dark' ? '#5e4b43':'#ced4da'
   ,color:props.mode==='dark' ?'white':'black'}} className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div className="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classNamees that we use to style each element. These classNamees control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>Text-Utils Details </strong>Free software utility which allows you to find the most frequent phrases and frequencies of words. Non-English language texts are supported. It also counts number of words, characters, sentences and syllables. Also calculates lexical density.
             </div>
             </div>
         </div>

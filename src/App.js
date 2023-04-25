@@ -1,17 +1,17 @@
 //import logo from './logo.svg';
 //import  './cseg.css';
-// import About from './components/About';
+import About from './components/About';
 import  { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 
-// import {
-//   BrowserRouter ,
-//   Routes,
-//   Route
-//  } from "react-router-dom";
+import {
+  HashRouter ,
+  Routes,
+  Route
+ } from "react-router-dom";
 
 function App() {
 
@@ -66,23 +66,23 @@ function App() {
 
   return(
    <>
-{/* 
-<BrowserRouter>  */}
+
+<HashRouter> 
  <Navbar title="TextUtils" a="About Us" mode={mode} tog={tog} mo={check}/>
  <Alert msg={mes}/>
   
  <div className="container my-3">
                                           {/* Go this way or directlly uninstall react-router-dom and install @5.2.0 */}
-{/*  
+ 
   <Routes>
           <Route exact path="/about" element={<About mode={mode}/>}/>             
           <Route exact path="/home"  element={<TextForm heading="Enter the text to analyse" mode={mode}  showAlert={showAlert}/>}/>
-  </Routes>  */}
+  </Routes> 
    
-  <TextForm heading="Enter the text to analyse" mode={mode}  showAlert={showAlert}/>
+  {/* <TextForm heading="Enter the text to analyse" mode={mode}  showAlert={showAlert}/> */}
 </div>
 
-{/* // </BrowserRouter> */}
+ </HashRouter>
 
 
  </> 
