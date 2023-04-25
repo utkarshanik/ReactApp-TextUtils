@@ -67,7 +67,7 @@ function App() {
   return(
    <>
 
-<HashRouter basename='/'> 
+<HashRouter basename='/ReactApp-TextUtils'> 
  <Navbar title="TextUtils" a="About Us" mode={mode} tog={tog} mo={check}/>
  <Alert msg={mes}/>
   
