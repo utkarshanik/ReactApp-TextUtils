@@ -67,7 +67,7 @@ function App() {
   return(
    <>
 
-<HashRouter> 
+<HashRouter basename='/'> 
  <Navbar title="TextUtils" a="About Us" mode={mode} tog={tog} mo={check}/>
  <Alert msg={mes}/>
   
