@@ -2,16 +2,16 @@ import React from 'react'
 
 function Alert(props) {
 
-  const capatalize=(word)=>{
-      const lower= word.toLowerCase();
-      return lower.charAt(0).toUpperCase() + lower.slice(1);
- }
+//   const capatalize=(word)=>{
+//       const lower= word.toLowerCase();
+//       return lower.charAt(0).toUpperCase() + lower.slice(1);
+//  }
 
 
   return (
 <div style={{height:'30px'}}>  
-  {props.msg &&<div className={`alert alert-${props.msg.type}  alert-dismissible fade show`} style={{height:'45px'}} role="alert">
-        <strong>{capatalize(props.msg.type)} : {props.msg.mesg}</strong>     
+  {props.msg &&<div className={`alert alert-${props.msg.type}  alert-dismissible fade show `} style={{height:'45px'}} role="alert">
+        <strong>{props.msg.mesg}</strong>     
 </div>}
 </div>
 )

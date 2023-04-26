@@ -1,13 +1,18 @@
 import React,{useState} from 'react'
-
 export default function TextForm(props) {
-
-    const handlUpclick=()=>{
+ 
+  const empty=()=>{
+      if(text.length===0)
+      {
+        props.showAlert("Enter Some Text First !!!",'danger')        
+      }
+  } 
+  const handlUpclick=()=>{
    //   console.log("upper class clicked"+text);      
         let newText=text.toUpperCase();
         setText(newText);
         props.showAlert("Coverted to Uppercase","success")
-      
+        empty();
         //  setText("You have clicked on handle"); 
       // setText is useed to change the text In "useSate" and assign in "text"
       }
@@ -16,7 +21,7 @@ export default function TextForm(props) {
         let newText=text.toLowerCase();
         setText(newText);
         props.showAlert("Coverted to Lowercase","success")
-
+        empty();
       }
 
     const handle =(event) =>{
@@ -28,7 +33,7 @@ export default function TextForm(props) {
         let newText='';
         setText(newText);
         props.showAlert("Text is Cleared","success")
-
+        empty()
         // if(document.getElementById.mybox.value==null)
         // {
         //   props.showAlert("nothing to remove","danger")
@@ -41,17 +46,7 @@ export default function TextForm(props) {
            setText(newText.join(" "));
            navigator.clipboard.writeText(text);
            props.showAlert("Space Has Removed","success")
-
-          //  if(newText)
-          //  {
-          //   props.showAlert("Nothing to Remove","danger")
-         
-          //  }
-          //  else
-          //  {
-          //   props.showAlert("Space Has Removed","success")
-          //  }
-     
+           empty()
         }
 
        const handlecopy=()=>
@@ -60,6 +55,7 @@ export default function TextForm(props) {
             text.select();
             navigator.clipboard.writeText(text.value);
             props.showAlert("Text Coppied","success")
+            empty()
        }
        
       const[text,setText]=useState('');
@@ -107,19 +103,19 @@ export default function TextForm(props) {
   </textarea>
   </div>  
    
-<button className="btn btn-bs-btn-border-color:#212529  my-2 mx-2" disabled={text.length===0  } style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
+<button className="btn btn-bs-btn-border-color:#212529  my-2 mx-2"  style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
   ,color:props.mode==='dark' ?'white':'white'}}  onClick={handlUpclick} >Convert to Uppercase</button>
 
-<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" disabled={text.length===0} style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
+<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
   ,color:props.mode==='dark' ?'white':'white'}} onClick={handlLoclick} >Convert to Lowercase</button>
 
-<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" disabled={text.length===0} style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
+<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
   ,color:props.mode==='dark' ?'white':'white'}} onClick={handlclrclick} >Clear Text</button>
 
-<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" disabled={text.length===0} style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
+<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
   ,color:props.mode==='dark' ?'white':'white'}} onClick={handlespac} >Remove Space</button>
 
-<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2" disabled={text.length===0} style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
+<button className="btn btn-bs-btn-border-color:#212529 my-2 mx-2"  style={{backgroundColor:props.mode==='dark' ? '#807f85':'#bb7c66'
   ,color:props.mode==='dark' ?'white':'white'}} onClick={handlecopy} >Copy Text</button>
 
 
