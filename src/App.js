@@ -69,16 +69,17 @@ function App() {
 
 <HashRouter basename='/'> 
  <Navbar title="TextUtils" a="About Us" mode={mode} tog={tog} mo={check}/>
- <Alert msg={mes}/>
  {/* <TextForm heading="Enter the text to analyse" mode={mode}  showAlert={showAlert}/>   */}
- <div className="container my-3">
+ <Alert msg={mes}/>
+  <div className="container my-3">
                                           {/* Go this way or directlly uninstall react-router-dom and install @5.2.0 */}
  
   <Routes>
           <Route exact path="/about" element={<About mode={mode}/>}/>             
-          <Route exact path="/home"  element={<TextForm heading="Enter the text to analyse" mode={mode}  showAlert={showAlert}/>}/>
+          <Route exact path="/"  element={<TextForm heading="Enter the text to analyse" mode={mode}  showAlert={showAlert}/>}/>
   </Routes> 
-   
+
+  
 
 </div>
 
