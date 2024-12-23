@@ -13,6 +13,11 @@ import {        // to navigate
   Route
  } from "react-router-dom";
 
+  <style>
+  body{
+    backgroundColor="#ced4da";
+  } 
+</style>
 function App() {
 
   const [mode, setM] = useState('light');
